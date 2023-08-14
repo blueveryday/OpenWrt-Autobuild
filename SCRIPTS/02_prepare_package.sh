@@ -78,7 +78,7 @@ cp -rf ../immortalwrt_23/package/utils/mhz ./package/utils/mhz
 # AutoReboot
 cp -rf ../immortalwrt_luci/applications/luci-app-autoreboot ./feeds/luci/applications/luci-app-autoreboot
 ln -sf ../../../feeds/luci/applications/luci-app-autoreboot ./package/feeds/luci/luci-app-autoreboot
-# Dae ready
+# Daed ready
 cp -rf ../immortalwrt_pkg/net/dae ./feeds/packages/net/dae
 ln -sf ../../../feeds/packages/net/dae ./package/feeds/packages/dae
 cp -rf ../immortalwrt_pkg/net/daed ./feeds/packages/net/daed
@@ -143,10 +143,6 @@ cp -rf ../immortalwrt_luci/applications/luci-app-zerotier ./feeds/luci/applicati
 ln -sf ../../../feeds/luci/applications/luci-app-zerotier ./package/feeds/luci/luci-app-zerotier
 rm -rf ./feeds/packages/net/zerotier
 cp -rf ../immortalwrt_pkg/net/zerotier ./feeds/packages/net/zerotier
-# Luci-app-daed
-git clone https://github.com/QiuSimons/luci-app-daed.git package/new/luci-app-daed
-cp -rf ../immortalwrt_pkg/net/daed ./feeds/packages/net/daed
-ln -sf ../../../feeds/packages/net/daed ./package/feeds/packages/daed
 # Luci-app-dae
 git clone https://github.com/sbwml/luci-app-dae.git package/new/luci-app-dae
 rm -rf ./package/new/luci-app-dae/dae
