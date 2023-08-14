@@ -115,6 +115,46 @@ cp -rf ../lede/target/linux/x86/patches-5.15/996-intel-igc-i225-i226-disable-eee
 # Ram-free
 cp -rf ../immortalwrt_luci/applications/luci-app-ramfree ./feeds/luci/applications/luci-app-ramfree
 ln -sf ../../../feeds/luci/applications/luci-app-ramfree ./package/feeds/luci/luci-app-ramfree
+# Add
+# Alist
+cp -rf ../alist/luci-app-alist ./package/new/luci-app-alist
+rm -rf ./package/new/luci-app-alist/po/zh_Hans
+cp -rf ../immortalwrt_pkg/net/alist ./feeds/packages/net/alist
+cp -rf ../alist/alist/files ./feeds/packages/net/alist/files
+sed -i '/Default)/a \\t$(CP) .\/files\/assets\/. $(PKG_BUILD_DIR)\/public\/dist\/assets\/' feeds/packages/net/alist/Makefile
+ln -sdf ../../../feeds/packages/net/alist ./package/feeds/packages/alist
+# KMS
+cp -rf ../lede_luci/applications/luci-app-vlmcsd ./feeds/luci/applications/luci-app-vlmcsd
+ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luci-app-vlmcsd
+cp -rf ../lede_pkg/net/vlmcsd ./package/new/vlmcsd
+# Socat
+cp -rf ../Lienol_pkg/luci-app-socat ./package/new/luci-app-socat
+sed -i '/socat\.config/d' feeds/packages/net/socat/Makefile
+# USB printer
+cp -rf ../lede_luci/applications/luci-app-usb-printer ./feeds/luci/applications/luci-app-usb-printer
+ln -sf ../../../feeds/luci/applications/luci-app-usb-printer ./package/feeds/luci/luci-app-usb-printer
+# Zerotier
+cp -rf ../immortalwrt_luci/applications/luci-app-zerotier ./feeds/luci/applications/luci-app-zerotier
+#cp -rf ../OpenWrt-Add/move_2_services.sh ./feeds/luci/applications/luci-app-zerotier/move_2_services.sh
+#chmod -R 755 ./feeds/luci/applications/luci-app-zerotier/move_2_services.sh
+#pushd feeds/luci/applications/luci-app-zerotier
+#bash move_2_services.sh
+#popd
+ln -sf ../../../feeds/luci/applications/luci-app-zerotier ./package/feeds/luci/luci-app-zerotier
+rm -rf ./feeds/packages/net/zerotier
+cp -rf ../immortalwrt_pkg/net/zerotier ./feeds/packages/net/zerotier
+# Luci-app-daed
+git clone https://github.com/QiuSimons/luci-app-daed.git package/new/luci-app-daed
+cp -rf ../immortalwrt_pkg/net/daed ./feeds/packages/net/daed
+ln -sf ../../../feeds/packages/net/daed ./package/feeds/packages/daed
+# Luci-app-dae
+git clone https://github.com/sbwml/luci-app-dae.git package/new/luci-app-dae
+rm -rf ./package/new/luci-app-dae/dae
+cp -rf ../immortalwrt_pkg/net/dae ./feeds/packages/net/dae
+ln -sf ../../../feeds/packages/net/dae ./package/feeds/packages/dae
+# Luci-app-ap-modem
+cp -rf ../openwrt_app/applications/luci-app-ap-modem ./feeds/luci/applications/luci-app-ap-modem
+ln -sf ../../../feeds/luci/applications/luci-app-ap-modem ./package/feeds/luci/luci-app-ap-modem
 
 ## Ending
 # Lets Fuck
