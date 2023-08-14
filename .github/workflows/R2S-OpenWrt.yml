@@ -112,4 +112,4 @@ jobs:
       uses: actions/upload-artifact@main
       with:
         name: R2S-OpenWrt
-        path: openwrt/bin/targets/rockchip/armv8/
+        path: openwrt/bin/
