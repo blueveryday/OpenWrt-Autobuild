@@ -22,5 +22,7 @@ git clone -b main --depth 1 https://github.com/openwrt/openwrt.git openwrt_ma
 git clone -b master --depth 1 https://github.com/openwrt/packages.git openwrt_pkg_ma
 git clone -b master --depth 1 https://github.com/openwrt/luci.git openwrt_luci_ma
 git clone -b master --depth 1 https://github.com/QiuSimons/openwrt-mos mosdns
+git clone -b master --depth 1 https://github.com/sbwml/luci-app-alist.git alist
+git clone -b main --depth 1 https://github.com/linkease/openwrt-app-actions.git openwrt_app
 
 exit 0
