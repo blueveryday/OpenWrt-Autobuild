@@ -144,8 +144,6 @@ cp -rf ../immortalwrt_pkg/net/zerotier ./feeds/packages/net/zerotier
 # Luci-app-dae
 git clone https://github.com/sbwml/luci-app-dae.git package/new/luci-app-dae
 rm -rf ./package/new/luci-app-dae/dae
-cp -rf ../immortalwrt_pkg/net/dae ./feeds/packages/net/dae
-ln -sf ../../../feeds/packages/net/dae ./package/feeds/packages/dae
 # Luci-app-ap-modem
 cp -rf ../openwrt_app/applications/luci-app-ap-modem ./feeds/luci/applications/luci-app-ap-modem
 ln -sf ../../../feeds/luci/applications/luci-app-ap-modem ./package/feeds/luci/luci-app-ap-modem
