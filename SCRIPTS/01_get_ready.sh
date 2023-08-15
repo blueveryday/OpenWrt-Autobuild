@@ -24,5 +24,6 @@ git clone -b master --depth 1 https://github.com/openwrt/luci.git openwrt_luci_m
 git clone -b master --depth 1 https://github.com/QiuSimons/openwrt-mos mosdns
 git clone -b master --depth 1 https://github.com/sbwml/luci-app-alist.git alist
 git clone -b main --depth 1 https://github.com/linkease/openwrt-app-actions.git openwrt_app
+git clone -b main --depth 1 https://github.com/Lienol/openwrt-package Lienol_pkg
 
 exit 0
