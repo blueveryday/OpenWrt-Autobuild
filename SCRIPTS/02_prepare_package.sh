@@ -134,13 +134,14 @@ cp -rf ../lede/target/linux/x86/patches-5.15/996-intel-igc-i225-i226-disable-eee
 # Ram-free
 cp -rf ../immortalwrt_luci/applications/luci-app-ramfree ./feeds/luci/applications/luci-app-ramfree
 ln -sf ../../../feeds/luci/applications/luci-app-ramfree ./package/feeds/luci/luci-app-ramfree
+# fix PF_RING-8.0.0
+wget -qO - https://github.com/SergeyFilippov/openwrt/commit/e66ca39.patch | patch -p1
 
 # Add
 # Alist
 cp -rf ../immortalwrt_luci/applications/luci-app-alist ./feeds/luci/applications/luci-app-alist
 ln -sf ../../../feeds/luci/applications/luci-app-alist ./package/feeds/luci/luci-app-alist
 cp -rf ../immortalwrt_pkg/net/alist ./feeds/packages/net/alist
-cp -rf ../PATCH/alist/Makefile ./feeds/packages/net/alist
 ln -sdf ../../../feeds/packages/net/alist ./package/feeds/packages/alist
 # KMS
 cp -rf ../lede_luci/applications/luci-app-vlmcsd ./feeds/luci/applications/luci-app-vlmcsd
