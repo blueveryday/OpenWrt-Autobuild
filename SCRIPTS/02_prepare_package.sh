@@ -142,6 +142,7 @@ wget -qO - https://github.com/SergeyFilippov/openwrt/commit/e66ca39.patch | patc
 cp -rf ../immortalwrt_luci/applications/luci-app-alist ./feeds/luci/applications/luci-app-alist
 ln -sf ../../../feeds/luci/applications/luci-app-alist ./package/feeds/luci/luci-app-alist
 cp -rf ../immortalwrt_pkg/net/alist ./feeds/packages/net/alist
+cp -rf ../PATCH/alist/Makefile ./feeds/packages/net/alist
 ln -sdf ../../../feeds/packages/net/alist ./package/feeds/packages/alist
 # KMS
 cp -rf ../lede_luci/applications/luci-app-vlmcsd ./feeds/luci/applications/luci-app-vlmcsd
