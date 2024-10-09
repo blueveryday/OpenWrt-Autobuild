@@ -131,6 +131,52 @@ cp -rf ../lede/target/linux/x86/patches-5.15/996-intel-igc-i225-i226-disable-eee
 cp -rf ../immortalwrt_luci/applications/luci-app-ramfree ./feeds/luci/applications/luci-app-ramfree
 ln -sf ../../../feeds/luci/applications/luci-app-ramfree ./package/feeds/luci/luci-app-ramfree
 
+# Add
+# Alist
+cp -rf ../immortalwrt_luci/applications/luci-app-alist ./feeds/luci/applications/luci-app-alist
+ln -sf ../../../feeds/luci/applications/luci-app-alist ./package/feeds/luci/luci-app-alist
+cp -rf ../immortalwrt_pkg/net/alist ./feeds/packages/net/alist
+ln -sdf ../../../feeds/packages/net/alist ./package/feeds/packages/alist
+# KMS
+cp -rf ../lede_luci/applications/luci-app-vlmcsd ./feeds/luci/applications/luci-app-vlmcsd
+ln -sf ../../../feeds/luci/applications/luci-app-vlmcsd ./package/feeds/luci/luci-app-vlmcsd
+cp -rf ../lede_pkg/net/vlmcsd ./package/new/vlmcsd
+# Socat
+cp -rf ../Lienol_pkg/luci-app-socat ./package/new/luci-app-socat
+sed -i '/socat\.config/d' feeds/packages/net/socat/Makefile
+# USB printer
+cp -rf ../lede_luci/applications/luci-app-usb-printer ./feeds/luci/applications/luci-app-usb-printer
+ln -sf ../../../feeds/luci/applications/luci-app-usb-printer ./package/feeds/luci/luci-app-usb-printer
+# Zerotier
+cp -rf ../immortalwrt_luci/applications/luci-app-zerotier ./feeds/luci/applications/luci-app-zerotier
+ln -sf ../../../feeds/luci/applications/luci-app-zerotier ./package/feeds/luci/luci-app-zerotier
+rm -rf ./feeds/packages/net/zerotier
+cp -rf ../immortalwrt_pkg/net/zerotier ./feeds/packages/net/zerotier
+# Luci-app-ap-modem
+cp -rf ../openwrt_app/applications/luci-app-ap-modem ./feeds/luci/applications/luci-app-ap-modem
+ln -sf ../../../feeds/luci/applications/luci-app-ap-modem ./package/feeds/luci/luci-app-ap-modem
+# tailscale
+rm -rf ./feeds/packages/net/tailscale
+cp -rf ../immortalwrt_pkg/net/tailscale ./feeds/packages/net/tailscale
+ln -sdf ../../../feeds/packages/net/tailscale ./package/feeds/packages/tailscale
+# ddns-go
+cp -rf ../immortalwrt_luci/applications/luci-app-ddns-go ./feeds/luci/applications/luci-app-ddns-go
+ln -sf ../../../feeds/luci/applications/luci-app-ddns-go ./package/feeds/luci/luci-app-ddns-go
+cp -rf ../immortalwrt_pkg/net/ddns-go ./feeds/packages/net/ddns-go
+ln -sdf ../../../feeds/packages/net/ddns-go ./package/feeds/packages/ddns-go
+# Fix kmod-multimedia-input dependent module missing
+cp -rf ../immortalwrt_23/package/kernel/linux/modules/video.mk ./package/kernel/linux/modules/video.mk
+# Luci-app-timecontrol
+cp -rf ../timecontrol/luci-app-timecontrol ./feeds/luci/applications/luci-app-timecontrol
+ln -sf ../../../feeds/luci/applications/luci-app-timecontrol ./package/feeds/luci/luci-app-timecontrol
+# homeproxy
+git clone --single-branch --depth 1 -b dev https://github.com/immortalwrt/homeproxy.git package/new/homeproxy
+rm -rf ./feeds/packages/net/sing-box
+cp -rf ../immortalwrt_pkg/net/sing-box ./feeds/packages/net/sing-box
+# ChinaDNS
+git clone -b luci --depth 1 https://github.com/QiuSimons/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
+cp -rf ../passwall_pkg/chinadns-ng ./package/new/chinadns-ng
+
 ## Ending
 # Lets Fuck
 mkdir package/base-files/files/usr/bin

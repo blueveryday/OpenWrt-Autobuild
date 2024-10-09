@@ -46,5 +46,7 @@ fi
 
 chmod 640 /etc/dae/geoip.dat
 chmod 640 /etc/dae/geosite.dat
+mv /etc/dae/geoip.dat /usr/share/v2ray/geoip.dat
+mv /etc/dae/geosite.dat /usr/share/v2ray/geosite.dat
 
 exit 0

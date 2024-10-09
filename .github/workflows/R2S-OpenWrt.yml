@@ -9,8 +9,8 @@ on:
       - 'SEED/R2S/config.seed'
       - 'SEED/extra.cfg'
       - 'SCRIPTS/switch'
- # watch:
- #   types: [started]
+  watch:
+    types: [started]
 
 jobs:
   build:

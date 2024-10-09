@@ -1,97 +1,229 @@
 CONFIG_TARGET_rockchip=y
 CONFIG_TARGET_rockchip_armv8=y
 CONFIG_TARGET_rockchip_armv8_DEVICE_friendlyarm_nanopi-r2s=y
-CONFIG_TARGET_KERNEL_PARTSIZE=30
-CONFIG_TARGET_ROOTFS_PARTSIZE=424
+CONFIG_DEVEL=y
+CONFIG_TOOLCHAINOPTS=y
+CONFIG_BIND_ENABLE_DOH=y
+CONFIG_BPF_TOOLCHAIN_HOST=y
+CONFIG_BPF_TOOLCHAIN_HOST_PATH=""
+# CONFIG_BPF_TOOLCHAIN_NONE is not set
+CONFIG_COREMARK_ENABLE_MULTITHREADING=y
+CONFIG_COREMARK_NUMBER_OF_THREADS=16
+CONFIG_COREMARK_OPTIMIZE_O3=y
+CONFIG_DWARVES=y
+CONFIG_GCC_USE_VERSION_11=y
+# CONFIG_GCC_USE_VERSION_12 is not set
+CONFIG_GCC_VERSION="11.3.0"
+CONFIG_GCC_VERSION_11=y
+CONFIG_HAS_BPF_TOOLCHAIN=y
+CONFIG_KERNEL_ARM_PMU=y
+CONFIG_KERNEL_BPF_EVENTS=y
 CONFIG_KERNEL_BUILD_DOMAIN="outlook.com"
 CONFIG_KERNEL_BUILD_USER="nicholas-sun"
-CONFIG_ALL_KMODS=y
-CONFIG_DEVEL=y
-# CONFIG_KERNEL_KALLSYMS is not set
-# CONFIG_KERNEL_WERROR is not set
-CONFIG_PACKAGE_r8152-firmware=y
-CONFIG_PACKAGE_trusted-firmware-a-rk3328=y
-CONFIG_TOOLCHAINOPTS=y
-CONFIG_GCC_USE_VERSION_11=y
-CONFIG_KERNEL_BPF_EVENTS=y
-CONFIG_KERNEL_CGROUPS=y
-CONFIG_KERNEL_CGROUP_BPF=y
-CONFIG_KERNEL_DEBUG_INFO=y
 CONFIG_KERNEL_DEBUG_INFO_BTF=y
-CONFIG_KERNEL_DEBUG_INFO_REDUCED=n
-CONFIG_BPF_TOOLCHAIN_HOST=y
+# CONFIG_KERNEL_DEBUG_INFO_REDUCED is not set
+CONFIG_KERNEL_FTRACE=y
+# CONFIG_KERNEL_KALLSYMS is not set
+CONFIG_KERNEL_KPROBES=y
+CONFIG_KERNEL_KPROBE_EVENTS=y
+CONFIG_KERNEL_MODULE_ALLOW_BTF_MISMATCH=y
+CONFIG_KERNEL_PERF_EVENTS=y
+# CONFIG_KERNEL_WERROR is not set
 CONFIG_KERNEL_XDP_SOCKETS=y
-CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
-
-#Basic Components
-CONFIG_PACKAGE_addition-trans-zh=y
-CONFIG_PACKAGE_autocore=y
-CONFIG_PACKAGE_coremark=y
-CONFIG_PACKAGE_coreutils-nohup=y
-CONFIG_PACKAGE_dae=y
-CONFIG_PACKAGE_dnsmasq-full=y
-# CONFIG_PACKAGE_dnsmasq_full_ipset is not set
-# CONFIG_PACKAGE_dnsmasq is not set
-CONFIG_PACKAGE_kmod-fs-f2fs=y
-CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
-CONFIG_PACKAGE_kmod-tcp-bbr=y
-CONFIG_PACKAGE_kmod-tun=y
-CONFIG_PACKAGE_usbmuxd=y
-CONFIG_PACKAGE_kmod-usb-net-rndis=y
-CONFIG_PACKAGE_kmod-usb-net-ipheth=y
-#CONFIG_PACKAGE_kmod-usb-net-rtl8152-vendor=y
-CONFIG_PACKAGE_libustream-openssl=y
-# CONFIG_PACKAGE_libustream-wolfssl is not set
-# CONFIG_PACKAGE_firewall is not set
-CONFIG_PACKAGE_firewall4=y
-# CONFIG_PACKAGE_kmod-ipt-offload is not set
-CONFIG_DEFAULT_kmod-nft-offload=y
-CONFIG_PACKAGE_kmod-nft-fullcone=y
-# CONFIG_PACKAGE_arptables-legacy is not set
-# CONFIG_PACKAGE_arptables-nft is not set
-# CONFIG_PACKAGE_ebtables-legacy is not set
-# CONFIG_PACKAGE_ebtables-nft is not set
-# CONFIG_PACKAGE_ip6tables-legacy is not set
-# CONFIG_PACKAGE_ip6tables-nft is not set
-# CONFIG_PACKAGE_iptables-legacy is not set
-# CONFIG_PACKAGE_iptables-nft is not set
-# CONFIG_PACKAGE_urandom-seed is not set
-# CONFIG_PACKAGE_urngd is not set
-
-#Luci
-CONFIG_LUCI_LANG_en=y
+CONFIG_LIBCURL_COOKIES=y
+CONFIG_LIBCURL_FILE=y
+CONFIG_LIBCURL_FTP=y
+CONFIG_LIBCURL_HTTP=y
+CONFIG_LIBCURL_NGHTTP2=y
+CONFIG_LIBCURL_NO_SMB="!"
+CONFIG_LIBCURL_OPENSSL=y
+CONFIG_LIBCURL_PROXY=y
+CONFIG_LIBCURL_UNIX_SOCKETS=y
 # CONFIG_LUCI_CSSTIDY is not set
 # CONFIG_LUCI_JSMIN is not set
-CONFIG_PACKAGE_luci=y
-CONFIG_PACKAGE_luci-compat=y
-
-#Luci Apps, Themes and Utilities
-CONFIG_PACKAGE_curl=y
-CONFIG_PACKAGE_ethtool=y
-CONFIG_PACKAGE_htop=y
-CONFIG_PACKAGE_iftop=y
-CONFIG_PACKAGE_iperf3=y
-CONFIG_PACKAGE_luci-app-autoreboot=y
-CONFIG_PACKAGE_luci-app-opkg=y
-CONFIG_PACKAGE_luci-app-ramfree=y
-CONFIG_PACKAGE_luci-theme-bootstrap=y
-CONFIG_PACKAGE_openssh-sftp-server=y
-CONFIG_PACKAGE_wget-ssl=y
-
-#OpenSSL
+CONFIG_LUCI_LANG_zh_Hans=y
 CONFIG_OPENSSL_ENGINE=y
 CONFIG_OPENSSL_OPTIMIZE_SPEED=y
 CONFIG_OPENSSL_WITH_ASM=y
-# CONFIG_OPENSSL_WITH_ERROR_MESSAGES is not set
+CONFIG_OPENSSL_WITH_CHACHA_POLY1305=y
+CONFIG_OPENSSL_WITH_CMS=y
+CONFIG_OPENSSL_WITH_DEPRECATED=y
+CONFIG_OPENSSL_WITH_IDEA=y
+CONFIG_OPENSSL_WITH_MDC2=y
+CONFIG_OPENSSL_WITH_PSK=y
+CONFIG_OPENSSL_WITH_SEED=y
+CONFIG_OPENSSL_WITH_SRP=y
+CONFIG_OPENSSL_WITH_TLS13=y
+CONFIG_OPENSSL_WITH_WHIRLPOOL=y
+CONFIG_PACKAGE_addition-trans-zh=y
+CONFIG_PACKAGE_alist=y
+CONFIG_PACKAGE_bind-dig=y
+CONFIG_PACKAGE_bind-host=y
+CONFIG_PACKAGE_bind-libs=y
+CONFIG_PACKAGE_block-mount=y
+CONFIG_PACKAGE_cgi-io=y
+CONFIG_PACKAGE_coremark=y
+CONFIG_PACKAGE_curl=y
+CONFIG_PACKAGE_dae=y
+CONFIG_PACKAGE_dae-geoip=y
+CONFIG_PACKAGE_dae-geosite=y
+CONFIG_PACKAGE_ddns-go=y
+# CONFIG_PACKAGE_dnsmasq is not set
+CONFIG_PACKAGE_dnsmasq-full=y
+CONFIG_PACKAGE_dnsmasq_full_auth=y
+CONFIG_PACKAGE_dnsmasq_full_conntrack=y
+CONFIG_PACKAGE_dnsmasq_full_dhcp=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_dnsmasq_full_dnssec=y
+CONFIG_PACKAGE_dnsmasq_full_nftset=y
+CONFIG_PACKAGE_dnsmasq_full_noid=y
+CONFIG_PACKAGE_dnsmasq_full_tftp=y
+CONFIG_PACKAGE_ethtool=y
+CONFIG_PACKAGE_fuse-utils=y
+# CONFIG_PACKAGE_getrandom is not set
+CONFIG_PACKAGE_htop=y
+CONFIG_PACKAGE_iftop=y
+CONFIG_PACKAGE_ip-tiny=y
+CONFIG_PACKAGE_ip6tables-nft=m
+CONFIG_PACKAGE_iperf3=y
+CONFIG_PACKAGE_iptables-nft=m
+CONFIG_PACKAGE_kmod-asn1-decoder=y
+CONFIG_PACKAGE_kmod-crypto-acompress=y
+CONFIG_PACKAGE_kmod-crypto-aead=y
+CONFIG_PACKAGE_kmod-crypto-authenc=y
+CONFIG_PACKAGE_kmod-crypto-crc32=y
+CONFIG_PACKAGE_kmod-crypto-manager=y
+CONFIG_PACKAGE_kmod-crypto-null=y
+CONFIG_PACKAGE_kmod-crypto-user=y
+CONFIG_PACKAGE_kmod-cryptodev=y
+CONFIG_PACKAGE_kmod-fs-f2fs=y
+CONFIG_PACKAGE_kmod-fuse=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ipt-core=y
+CONFIG_PACKAGE_kmod-lib-lzo=y
+CONFIG_PACKAGE_kmod-lib-textsearch=y
+CONFIG_PACKAGE_kmod-nf-conntrack-netlink=y
+CONFIG_PACKAGE_kmod-nf-ipt=y
+CONFIG_PACKAGE_kmod-nf-ipt6=y
+CONFIG_PACKAGE_kmod-nf-nathelper-extra=y
+CONFIG_PACKAGE_kmod-nft-compat=y
+CONFIG_PACKAGE_kmod-nft-fullcone=y
+CONFIG_PACKAGE_kmod-sched-bpf=y
+CONFIG_PACKAGE_kmod-sched-core=y
+CONFIG_PACKAGE_kmod-tcp-bbr=y
+CONFIG_PACKAGE_kmod-tun=y
+CONFIG_PACKAGE_kmod-usb-net-ipheth=y
+CONFIG_PACKAGE_kmod-usb-net-rndis=y
+CONFIG_PACKAGE_kmod-usb-printer=y
+CONFIG_PACKAGE_kmod-veth=y
+CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
+CONFIG_PACKAGE_kmod-zram=y
+CONFIG_PACKAGE_libatomic=y
+CONFIG_PACKAGE_libcurl=y
+CONFIG_PACKAGE_libfuse=y
+CONFIG_PACKAGE_libgmp=y
+CONFIG_PACKAGE_libimobiledevice=y
+CONFIG_PACKAGE_libiperf3=y
+CONFIG_PACKAGE_libiptext=y
+CONFIG_PACKAGE_libiptext-nft=y
+CONFIG_PACKAGE_libiptext6=y
+CONFIG_PACKAGE_libiwinfo=y
+CONFIG_PACKAGE_libiwinfo-data=y
+CONFIG_PACKAGE_liblua=y
+CONFIG_PACKAGE_liblucihttp=y
+CONFIG_PACKAGE_liblucihttp-lua=y
+CONFIG_PACKAGE_liblucihttp-ucode=y
+CONFIG_PACKAGE_libmbedtls=m
+CONFIG_PACKAGE_libminiupnpc=y
+CONFIG_PACKAGE_libnatpmp=y
+CONFIG_PACKAGE_libnetfilter-conntrack=y
+CONFIG_PACKAGE_libnettle=y
+CONFIG_PACKAGE_libnfnetlink=y
+CONFIG_PACKAGE_libnghttp2=y
+CONFIG_PACKAGE_libopenssl=y
 CONFIG_PACKAGE_libopenssl-afalg=y
 CONFIG_PACKAGE_libopenssl-conf=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 CONFIG_PACKAGE_libopenssl-legacy=y
-CONFIG_PACKAGE_libopenssl-padlock=y
+CONFIG_PACKAGE_libpcap=y
+CONFIG_PACKAGE_libpcre2=y
+CONFIG_PACKAGE_libplist=y
+CONFIG_PACKAGE_libstdcpp=y
+CONFIG_PACKAGE_libtirpc=y
+CONFIG_PACKAGE_libubus-lua=y
+CONFIG_PACKAGE_libusb-1.0=y
+CONFIG_PACKAGE_libusbmuxd=y
+CONFIG_PACKAGE_libustream-mbedtls=m
+CONFIG_PACKAGE_libustream-openssl=y
+CONFIG_PACKAGE_libuv=y
+CONFIG_PACKAGE_libxml2=y
+CONFIG_PACKAGE_libxtables=y
+CONFIG_PACKAGE_lsof=y
+CONFIG_PACKAGE_lua=y
+CONFIG_PACKAGE_luci=y
+CONFIG_PACKAGE_luci-app-alist=y
+CONFIG_PACKAGE_luci-app-ap-modem=y
+CONFIG_PACKAGE_luci-app-ddns-go=y
+CONFIG_PACKAGE_luci-app-firewall=y
+CONFIG_PACKAGE_luci-app-opkg=y
+CONFIG_PACKAGE_luci-app-ramfree=y
+CONFIG_PACKAGE_luci-app-usb-printer=y
+CONFIG_PACKAGE_luci-app-vlmcsd=y
+CONFIG_PACKAGE_luci-base=y
+CONFIG_PACKAGE_luci-compat=y
+CONFIG_PACKAGE_luci-i18n-alist-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ap-modem-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ddns-go-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+CONFIG_PACKAGE_luci-lib-base=y
+CONFIG_PACKAGE_luci-lib-ip=y
+CONFIG_PACKAGE_luci-lib-ipkg=y
+CONFIG_PACKAGE_luci-lib-jsonc=y
+CONFIG_PACKAGE_luci-lib-nixio=y
+CONFIG_PACKAGE_luci-light=y
+CONFIG_PACKAGE_luci-lua-runtime=y
+CONFIG_PACKAGE_luci-mod-admin-full=y
+CONFIG_PACKAGE_luci-mod-network=y
+CONFIG_PACKAGE_luci-mod-status=y
+CONFIG_PACKAGE_luci-mod-system=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_luci-proto-ppp=y
+CONFIG_PACKAGE_luci-theme-bootstrap=y
+CONFIG_PACKAGE_nano=y
 CONFIG_PACKAGE_openssl-util=y
-CONFIG_PACKAGE_libcurl=y
-CONFIG_LIBCURL_OPENSSL=y
-# CONFIG_LIBCURL_GNUTLS is not set
-# CONFIG_LIBCURL_MBEDTLS is not set
-# CONFIG_LIBCURL_NOSSL is not set
-# CONFIG_LIBCURL_WOLFSSL is not set
+CONFIG_PACKAGE_p910nd=y
+CONFIG_PACKAGE_rpcd=y
+CONFIG_PACKAGE_rpcd-mod-file=y
+CONFIG_PACKAGE_rpcd-mod-iwinfo=y
+CONFIG_PACKAGE_rpcd-mod-luci=y
+CONFIG_PACKAGE_rpcd-mod-rrdns=y
+CONFIG_PACKAGE_rpcd-mod-ucode=y
+CONFIG_PACKAGE_tailscale=y
+CONFIG_PACKAGE_tcpdump=m
+CONFIG_PACKAGE_ucode-mod-html=y
+CONFIG_PACKAGE_ucode-mod-lua=y
+CONFIG_PACKAGE_ucode-mod-math=y
+CONFIG_PACKAGE_uhttpd=y
+CONFIG_PACKAGE_uhttpd-mod-ubus=y
+# CONFIG_PACKAGE_urandom-seed is not set
+# CONFIG_PACKAGE_urngd is not set
+CONFIG_PACKAGE_usbmuxd=y
+CONFIG_PACKAGE_v2ray-geoip=y
+CONFIG_PACKAGE_v2ray-geosite=y
+CONFIG_PACKAGE_vlmcsd=y
+CONFIG_PACKAGE_wget-ssl=y
+CONFIG_PACKAGE_xtables-nft=y
+CONFIG_PACKAGE_zlib=y
+CONFIG_PACKAGE_zoneinfo-asia=y
+CONFIG_PACKAGE_zoneinfo-core=y
+CONFIG_PACKAGE_zram-swap=y
+CONFIG_TARGET_KERNEL_PARTSIZE=30
+CONFIG_TARGET_ROOTFS_PARTSIZE=424
+CONFIG_USE_LLVM_HOST=y
+CONFIG_ZRAM_DEF_COMP_LZORLE=y
+# CONFIG_OPENSSL_WITH_ERROR_MESSAGES is not set

@@ -1,12 +1,12 @@
 #!/bin/sh
 
 #Set default lang
-uci set luci.main.lang='en'
+uci set luci.main.lang='zh_cn'
 uci commit luci
 
 #Timezone UTC+10/+11
-uci set system.@system[0].zonename=Australia/Melbourne
-uci set system.@system[0].timezone=AEST-10AEDT,M10.1.0,M4.1.0/3
+uci set system.@system[0].zonename=Asia/Shanghai
+uci set system.@system[0].timezone=CST-8
 uci commit system
 
 #uhttpd
@@ -20,16 +20,16 @@ uci commit uhttpd
 /etc/init.d/uhttpd restart
 
 #Defalut lan IP
-uci set network.lan.ipaddr=192.168.1.1
+uci set network.lan.ipaddr=192.168.2.1
 
 #Remove IPv6
-uci delete network.globals.ula_prefix
-uci delete network.lan.ip6assign
-uci delete network.wan6
-uci delete dhcp.lan.ra
-uci delete dhcp.lan.ra_management
-uci delete dhcp.lan.dhcpv6
-uci delete dhcp.lan.ndp
+#uci delete network.globals.ula_prefix
+#uci delete network.lan.ip6assign
+#uci delete network.wan6
+#uci delete dhcp.lan.ra
+#uci delete dhcp.lan.ra_management
+#uci delete dhcp.lan.dhcpv6
+#uci delete dhcp.lan.ndp
 uci set dhcp.@dnsmasq[0].filter_aaaa=1
 uci commit dhcp
 
