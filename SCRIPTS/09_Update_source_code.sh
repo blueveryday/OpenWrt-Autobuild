@@ -13,10 +13,8 @@ directories=(
   "openwrt_ma"
   "openwrt_pkg_ma"
   "openwrt_luci_ma"
-  "mosdns"
   "openwrt_app"
   "Lienol_pkg"
-  "timecontrol"
   "passwall_pkg"
 )
 

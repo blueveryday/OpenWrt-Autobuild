@@ -176,6 +176,10 @@ cp -rf ../immortalwrt_pkg/net/sing-box ./feeds/packages/net/sing-box
 # ChinaDNS
 git clone -b luci --depth 1 https://github.com/QiuSimons/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
 cp -rf ../passwall_pkg/chinadns-ng ./package/new/chinadns-ng
+# Mosdns
+git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns package/new/luci-app-mosdns
+# Mihomo
+git clone -b main --depth 1 https://github.com/morytyann/OpenWrt-mihomo package/new/OpenWrt-mihomo
 
 ## Ending
 # Lets Fuck
